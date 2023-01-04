@@ -1,0 +1,137 @@
+.main-container {
+  padding: 85px 0 20px 0;
+
+  @include breakpoint(desktop) {
+    padding-top: 80px;
+  }
+}
+
+.main-container__top-box {
+  margin-bottom: 77px;
+
+  @include breakpoint(desktop) {
+    margin-bottom: 62px;
+  }
+}
+
+.heading-wrap {
+  @include breakpoint(desktop) {
+    max-width: 540px;
+    margin: auto;
+  }
+}
+
+.top-box__subheading {
+  font-weight: 275;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 0.166667px;
+  color: #4d4f62;
+  text-align: center;
+
+  @include breakpoint(desktop) {
+    font-size: 36px;
+    line-height: 54px;
+    letter-spacing: 0.25px;
+  }
+}
+
+.top-box__heading {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 0.166667px;
+  text-align: center;
+  margin-bottom: 13px;
+
+  @include breakpoint(desktop) {
+    font-size: 36px;
+    line-height: 54px;
+    letter-spacing: 0.25px;
+  }
+}
+
+.top-box__subscription {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  text-align: center;
+  letter-spacing: 0.104167px;
+  opacity: 0.5;
+  max-width: 540px;
+
+  @include breakpoint(desktop) {
+    margin: auto;
+  }
+}
+
+.card__list {
+  .layout {
+    @include breakpoint(desktop) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+      grid-gap: 33px;
+    }
+  }
+}
+
+.card__item-title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+
+  @include breakpoint(desktop) {
+    margin-bottom: 7px;
+  }
+}
+
+.card__item-content {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 23px;
+  letter-spacing: 0.0902778px;
+  opacity: 0.5;
+}
+
+.card__item {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  margin-bottom: 24px;
+  min-height: 247px;
+  height: 100%;
+  padding: 26px 28px;
+  background: url(./assets/icon-supervisor.svg) no-repeat #ffffff bottom 23px
+    right 24px;
+
+  @include breakpoint(desktop) {
+    margin-bottom: 0;
+    padding: 28px 26px 26px 31px;
+    background-position: bottom 30px right 31px;
+  }
+
+  &.card__item-supervisor {
+    border-top: 2px solid #00c8c8;
+    grid-row: 2 / span 2;
+  }
+
+  &.card__item-team-builder {
+    border-top: 2px solid #ea5454;
+    background-image: url(./assets/icon-team-builder.svg);
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+
+  &.card__item-karma {
+    border-top: 2px solid #fdbf00;
+    background-image: url(./assets/icon-karma.svg);
+    grid-column: 2;
+    grid-row: 3 / span 2;
+  }
+
+  &.card__item-calculator {
+    border-top: 2px solid #377fd2;
+    background-image: url(./assets/icon-calculator.svg);
+    grid-column: 3;
+    grid-row: 2 / span 2;
+  }
+}
